@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>لیست خرید</title>
+    <link rel="stylesheet" href="./style.css" />
+  
+  </head>
+  <body>
+    <main class="shopping-card">
+      <header class="card-header">
+
+        <h1>لیست خرید</h1>
+        <p>نام کالا را وارد کنید و به لیست اضافه کنید.</p>
+      </header>
+
+      <section class="entry" aria-label="افزودن کالا">
+        <label for="item-name">نام کالا</label>
+        <input
+          id="item-name"
+          type="text"
+          placeholder="مثلاً شیر"
+          autocomplete="off"
+        />
+        <button id="add-item" type="button">اضافه کن</button>
+
+        <div class="message-area">
+          <p id="message" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="list-section" aria-labelledby="list-heading">
+        <h2 id="list-heading">کالاهای لیست</h2>
+        <ul id="shopping-list"></ul>
+
+        <p id="empty-message">لیست خرید هنوز خالی است.</p>
+        <p>تعداد کالا <span id="item-count">0 </span></p>
+        <p><span id="item-purchase"></span>تعداد کالاهای خریداری شده:</p>
+        <p><span id="item-remind"></span>تعداد کالاهای  باقی مانده:</p>
+
+      </section>
+    </main>
+      <script src="./script.js" ></script>
+  </body>
+</html>

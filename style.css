@@ -1,0 +1,377 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 45px 15px;
+  background: linear-gradient(135deg, #f4f5fa, #eef1f8);
+  color: #30364d;
+  font-family: Tahoma, Arial, sans-serif;
+  line-height: 1.7;
+}
+
+/* کارت اصلی */
+
+.shopping-card {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e2e4ec;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(54, 62, 91, 0.1);
+}
+
+/* هدر */
+
+.card-header {
+  position: relative;
+  padding: 32px 35px;
+  background: linear-gradient(135deg, #3f4b7a, #59679d);
+  color: white;
+  border-bottom: 3px solid #e4c779;
+}
+
+.card-header::after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  left: -25px;
+  top: -35px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.card-header h1 {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 7px;
+  font-size: 29px;
+  font-weight: bold;
+}
+
+.card-header p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #e8ebf5;
+  font-size: 13px;
+}
+
+/* قسمت افزودن کالا */
+
+.entry {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  padding: 30px 35px 20px;
+}
+
+.entry label {
+  grid-column: 1 / -1;
+  margin-bottom: 2px;
+  color: #3b4158;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+input {
+  width: 100%;
+  height: 52px;
+  padding: 0 16px;
+  border: 1px solid #d8dce7;
+  border-radius: 10px;
+  background: #fbfcfe;
+  color: #30364d;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+input::placeholder {
+  color: #a5a9b7;
+}
+
+input:focus {
+  outline: none;
+  border-color: #6d7bb2;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(109, 123, 178, 0.12);
+}
+
+/* دکمه اضافه کردن */
+
+#add-item {
+  padding: 0 24px;
+  border: none;
+  border-radius: 10px;
+  background: #3f4b7a;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(63, 75, 122, 0.2);
+  transition: 0.2s;
+}
+
+#add-item:hover {
+  background: #344066;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(63, 75, 122, 0.25);
+}
+
+#add-item:active {
+  transform: translateY(0);
+}
+
+/* پیام */
+
+.message-area {
+  grid-column: 1 / -1;
+  min-height: 25px;
+}
+
+#message {
+  margin: 0;
+  font-size: 13px;
+}
+
+#message.success {
+  color: #5871a9;
+}
+
+#message.error {
+  color: #b65345;
+}
+
+/* قسمت لیست */
+
+.list-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 10px 35px 35px;
+}
+
+.list-section > h2,
+#shopping-list,
+#empty-message {
+  grid-column: 1 / -1;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 9px;
+  color: #30364d;
+  font-size: 17px;
+}
+
+h2::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e2e4ec;
+}
+
+/* لیست کالاها */
+
+#shopping-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#shopping-list > li {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 13px 15px;
+  background: #fafbfe;
+  border: 1px solid #e1e4ec;
+  border-right: 4px solid #7180b5;
+  border-radius: 10px;
+  color: #353b52;
+  font-size: 14px;
+  box-shadow: 0 2px 7px rgba(50, 58, 85, 0.04);
+  transition: 0.2s;
+}
+
+#shopping-list > li:hover {
+  background: #f7f8fc;
+  border-right-color: #59699f;
+  transform: translateX(-2px);
+  box-shadow: 0 4px 12px rgba(50, 58, 85, 0.08);
+}
+
+/* دکمه‌های داخل لیست */
+
+#shopping-list > li > button {
+  padding: 5px 11px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: 0.2s;
+}
+
+#shopping-list > li > button:first-of-type {
+  margin-right: auto;
+  border: 1px solid #ead5d0;
+  background: #fff9f7;
+  color: #a65345;
+}
+
+#shopping-list > li > button:first-of-type:hover {
+  background: #fae9e4;
+  border-color: #dfbdb5;
+}
+
+#shopping-list > li > button:last-of-type {
+  border: 1px solid #ccd4e8;
+  background: #ffffff;
+  color: #596ba2;
+}
+
+#shopping-list > li > button:last-of-type:hover {
+  background: #edf0fa;
+  border-color: #b9c2dd;
+}
+
+/* کالای خریداری شده */
+
+#shopping-list > li.hide {
+  background: #f1f2f6;
+  border-right-color: #929bb8;
+  color: #999eae;
+}
+
+#shopping-list > li.hide > button:last-of-type {
+  background: #e5e8f1;
+  border-color: #ccd2e2;
+  color: #4f6092;
+}
+
+#shopping-list > li.hide > .item-title {
+  text-decoration: line-through;
+}
+
+/* پیام خالی بودن لیست */
+
+#empty-message {
+  margin: 0 0 10px;
+  color: #858a9a;
+  font-size: 13px;
+}
+
+/* کارت‌های آماری */
+
+.list-section > p:not(#empty-message) {
+  margin: 0;
+  padding: 16px;
+  border: 1px solid #e1e4ec;
+  border-radius: 11px;
+  background: #f8f9fc;
+  color: #777d8e;
+  font-size: 12px;
+  box-shadow: 0 2px 7px rgba(50, 58, 85, 0.04);
+  transition: 0.2s;
+}
+
+.list-section > p:not(#empty-message):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(50, 58, 85, 0.07);
+}
+
+/* عددهای آماری */
+
+.list-section > p:not(#empty-message) > span {
+  display: block;
+  margin-top: 5px;
+  color: #3f4b7a;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+#item-purchase {
+  color: #6275ae;
+}
+
+#item-remind {
+  color: #b18a48;
+}
+
+/* موبایل */
+
+@media (max-width: 520px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  .shopping-card {
+    border-radius: 15px;
+  }
+
+  .card-header {
+    padding: 26px 20px;
+  }
+
+  .card-header h1 {
+    font-size: 25px;
+  }
+
+  .entry {
+    padding: 25px 20px 15px;
+  }
+
+  #add-item {
+    padding: 0 16px;
+  }
+
+  .list-section {
+    padding: 10px 20px 25px;
+    gap: 9px;
+  }
+
+  #shopping-list > li {
+    padding: 11px;
+  }
+
+  .list-section > p:not(#empty-message) {
+    padding: 12px;
+  }
+
+  .list-section > p:not(#empty-message) > span {
+    font-size: 24px;
+  }
+}
+
+/* موبایل خیلی کوچک */
+
+@media (max-width: 360px) {
+  .list-section {
+    grid-template-columns: 1fr;
+  }
+
+  .list-section > p:not(#empty-message) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .list-section > p:not(#empty-message) > span {
+    margin-top: 0;
+  }
+}

@@ -76,7 +76,7 @@ No frameworks or JavaScript libraries are used.
 
 | Mobile View | Desktop View |
 | :---: | :---: |
-| ![Mobile preview](./screenshots/mobile.gif) | ![Desktop preview](./screenshots/desktop.gif) |
+| ![Mobile preview](./screenshot/mobile.gif) | ![Desktop preview](./screenshot/desktop.gif) |
 
 ## How to Run
 

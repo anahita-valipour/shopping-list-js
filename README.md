@@ -1,97 +1,131 @@
 # 🛒 shopping-list-js
 
-An interactive shopping list where users can add items, remove them, and track their purchase status. Built from scratch with **HTML, CSS, and Vanilla JavaScript**, with no frameworks or libraries.
+A responsive shopping list built with **HTML, CSS, and Vanilla JavaScript**. Add, edit, search, and delete items, and manage their purchase status.
 
 ## Description
 
-`shopping-list-js` is a JavaScript and DOM practice project focused on turning real requirements into working application logic. Users can add items to a list, mark them as bought or not bought, delete them at any time, and see live counters for the total, purchased, and remaining items.
+`shopping-list-js` is a practice project focused on DOM manipulation, events, and translating requirements into application logic.
 
-The project is fully responsive and works on both desktop and mobile screens.
+The interface uses Persian text, a right-to-left layout, and the IRANYekanX font. It adapts to desktop and mobile screens.
 
 ## Features
 
-**Adding items**
+### Adding items
+
 - Add new items to the end of the list
-- Prevent empty or whitespace-only input
-- Show an error message for invalid input
-- Automatically clear the input after a successful add
+- Reject empty or whitespace-only input
+- Display feedback messages
+- Automatically clear the input after adding an item
 
-**Removing items**
-- A dedicated "Delete" button for every item
-- Each item is removed independently without affecting the others
-- Delete works on dynamically created items, and even after the purchase status has changed
+### Editing items
 
-**Purchase status**
-- A "Bought" button for every item
-- Clicking it strikes through the item's name and updates its status
-- The button text toggles between "Bought" and "Not bought yet"
-- Items can be switched back to their original state at any time
+- Edit an item using its dedicated Edit button
+- Load the current name into the input field
+- Save the updated name without creating a new item
+- Handle Edit button clicks through event delegation
 
-**Live counters**
-- Total number of items
-- Number of purchased items
-- Number of remaining items
-- All counters update instantly on add, delete, and status change
+### Removing items
+
+- Delete individual items using their Delete buttons
+- Handle Delete button clicks through event delegation
+- Support dynamically created items
+
+### Searching items
+
+- Filter the list while typing in the search field
+- Show items whose names contain the search text
+- Hide unrelated items
+- Show all items when the search field is cleared
+
+### Purchase status
+
+- Toggle items between bought and not bought
+- Strike through the name of a purchased item
+- Update the purchase status button text
+
+### Item counters
+
+- Display the total number of items
+- Display the number of purchased items
+- Display the number of remaining items
+
+## Design
+
+- Responsive layout for desktop and mobile
+- Persian interface with right-to-left support
+- IRANYekanX typography
+- Pencil and trash icons for Edit and Delete buttons
+- Small visual markers beside item names
+- Styled search field with a search icon
+- Hover effects and keyboard focus styles
+- Reduced motion support
 
 ## Technologies
 
 - HTML5
-- CSS3 (Flexbox, CSS Grid, Media Queries, CSS Classes)
-- Vanilla JavaScript (DOM Manipulation, Event Handling, Dynamic DOM Elements)
+- CSS3 — Flexbox, Grid, media queries, and pseudo-elements
+- Vanilla JavaScript — DOM manipulation, events, and event delegation
 
-> No frameworks or libraries were used. No React, Bootstrap, Swiper, or anything else.
+No frameworks or JavaScript libraries are used.
 
-🔗 **Live Demo:** [View live project](https://anahita-valipour.github.io/shopping-list-js) <!-- update this link once GitHub Pages is enabled -->
+## Live Demo
 
----
+[View the live project](https://anahita-valipour.github.io/shopping-list-js/)
 
-## 📸 Preview
+## Preview
 
-<!-- Replace with your actual screenshots or GIF -->
-
-|               Mobile View                |                Desktop View                |
-| :--------------------------------------: | :----------------------------------------: |
-| ![mobile view](./screenshot/mobile.gif) | ![desktop view](./screenshot/desktop.gif) |
+| Mobile View | Desktop View |
+| :---: | :---: |
+| ![Mobile preview](./screenshots/mobile.gif) | ![Desktop preview](./screenshots/desktop.gif) |
 
 ## How to Run
 
-Clone the repository and open `index.html` in your browser. No installation required.
+Clone the repository:
 
-Or use the **Live Server** extension in VS Code to run it with a single click.
+```bash
+git clone https://github.com/anahita-valipour/shopping-list-js.git
+```
+
+Open `index.html` in your browser, or run the project using the Live Server extension in VS Code.
+
+No build step or package installation is required.
 
 ## Project Structure
 
 ```text
 shopping-list-js/
-├── index.html        # Page structure
-├── style.css         # Styling and responsive layout
-├── script.js         # App logic (DOM manipulation and events)
+├── index.html
+├── style.css
+├── script.js
+├── fonts/
+│   ├── IRANYekanX-Regular.woff2
+│   └── IRANYekanX-Bold.woff2
 ├── screenshots/
-│   ├── mobile.gif    # Mobile preview
-│   └── desktop.gif   # Desktop preview
+│   ├── mobile.gif
+│   └── desktop.gif
 └── README.md
 ```
 
 ## Learning Goals
 
-This project was built to practice and strengthen:
+This project was built to practice:
 
-- JavaScript fundamentals
-- DOM manipulation
-- Event handling
-- Creating and removing elements dynamically
-- Managing the state of UI elements
-- Problem solving and translating requirements into program logic
-
----
+- Creating, updating, and removing DOM elements
+- Handling user interactions
+- Using event delegation for dynamically created buttons
+- Managing editing and purchase states
+- Validating user input
+- Filtering items with string methods
+- Using data attributes through `dataset`
+- Building responsive interfaces
+- Breaking requirements into smaller logical steps
 
 ## Author
 
 **Anahita Valipour**
-🔗 [GitHub](https://github.com/anahita-valipour)
 
----
+[GitHub](https://github.com/anahita-valipour)
 
-## License
+## Project Purpose
 
-This project was built for educational and portfolio purposes only.
+Created for learning and portfolio practice.
